@@ -186,17 +186,17 @@
 
   // jQuery
   function sweet_justice_jq() {
-    $('.sweet-justice').each(function(idx,el) {
-      $(el).css({
+    jQuery('.sweet-justice').each(function(idx,el) {
+      jQuery(el).css({
         'text-align':   'justify',
         'text-justify': 'distribute'
       });
       justify_my_love(el);
     });
-    $('.sweet-hyphens').each(function(idx,el) {
+    jQuery('.sweet-hyphens').each(function(idx,el) {
       justify_my_love(el);
     });
-    $('body').bind('copy', copy_protect);
+    jQuery('body').bind('copy', copy_protect);
   }
 
   // YUI3
@@ -223,7 +223,7 @@
 
   // dispatch on library
   if (window.jQuery) {
-    $(window).load(sweet_justice_jq);
+    jQuery(window).load(sweet_justice_jq);
 
   } else if (window.YUI) {
     YUI().use('node', function(Y) {
